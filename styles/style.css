@@ -8,6 +8,9 @@ header {
   align-items: center;
   padding: 2rem;
 }
+header nav {
+  display: none;
+}
 header i {
   color: #999999;
 }
@@ -30,6 +33,15 @@ p {
   font-size: 20px;
   line-height: 150%;
 }
+a {
+  font-size: 20px;
+  line-height: 100%;
+  text-decoration: none;
+  color: #555555;
+}
+a#sign-up {
+  color: #ff3998;
+}
 section.hero {
   max-width: 100%;
   display: flex;
@@ -38,7 +50,6 @@ section.hero {
   margin-bottom: 3em;
 }
 .hero img {
-  display: block;
   height: 430px;
   position: absolute;
   right: -200px;
@@ -71,7 +82,7 @@ section.upsell {
   justify-content: flex-end;
   background-image: url(/assets/background.svg);
   background-size: cover;
-  background-position-x: -20px;
+  background-position: center;
   padding: 2em;
 }
 h2 {
@@ -91,7 +102,11 @@ section.press {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  row-gap: 1em;
   padding: 4em 2em;
+}
+img[alt="OpenDoor"] {
+  display: none;
 }
 .press a:first-child {
   width: 138px;
@@ -203,26 +218,121 @@ div.left {
   padding-bottom: 1em;
   margin: 0;
 }
-.right li a {
-  color: #555555;
-  text-decoration: none;
-  font-size: 20px;
-}
 .right li {
   list-style: none;
-}
-.right td {
-  padding: 0.5em;
-  width: 100%;
-}
-.right table {
-  display: block;
-  padding: 0.5em;
-  width: 70%;
-  text-align: left;
+  padding: 0.5em 0;
 }
 .bottom p {
   line-height: 100%;
   color: #999999;
   margin: 2em 0;
+}
+.bottom p#launching-date {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 0 5rem;
+  }
+  header i {
+    display: none !important;
+  }
+  header nav {
+    display: block;
+  }
+  header a {
+    padding-right: 1em;
+  }
+  header {
+    padding: 4.4rem 0;
+  }
+  .hero {
+    padding-right: 0;
+    padding-bottom: 7em;
+    overflow: auto;
+  }
+  .hero .text {
+    flex-basis: 50%;
+    padding-left: 0;
+    padding-top: 5em;
+  }
+  .text h1 {
+    font-size: 96px;
+    line-height: 116px;
+    margin: 1.5rem 0;
+  }
+  .hero img {
+    position: relative;
+    top: 80px;
+    height: 720px;
+    right: -30px;
+  }
+  section.upsell {
+    padding: 4rem;
+    border-radius: 16px;
+  }
+  .upsell h2,
+  p {
+    align-self: flex-start;
+  }
+  img[alt="OpenDoor"] {
+    display: block;
+  }
+  .press a:first-child {
+    width: auto;
+  }
+  section.press {
+    padding: 5rem 0;
+  }
+  .showcase .text {
+    padding: 0;
+  }
+  .showcase .nfts {
+    padding: 2em 0;
+    overflow-y: hidden;
+  }
+  footer .upsell .text {
+    width: 46%;
+  }
+  footer .upsell {
+    flex-basis: 100%;
+    padding-top: 7em;
+    border-top: 2px solid #eeeeee;
+    border-bottom: 2px solid #eeeeee;
+    margin-top: 3em;
+  }
+  footer .upsell img {
+    right: 100px;
+  }
+  footer .upsell {
+    padding-bottom: 4em;
+  }
+  footer {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .left,
+  .right {
+    flex-basis: 50%;
+    padding-top: 4em;
+  }
+  .left {
+    align-self: flex-end;
+  }
+  .right ul {
+    flex-basis: auto;
+    gap: 4em;
+  }
+  .right nav {
+    justify-content: space-between;
+  }
+  .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2em;
+  }
 }
