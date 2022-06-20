@@ -19,7 +19,6 @@ h4 {
   line-height: 19px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #ff3998;
   padding-top: 1em;
 }
 h1 {
@@ -37,9 +36,9 @@ a {
   font-size: 20px;
   line-height: 100%;
   text-decoration: none;
-  color: #555555;
 }
-a#sign-up {
+a#sign-up,
+h4 {
   color: #ff3998;
 }
 section.hero {
@@ -59,7 +58,10 @@ section.hero {
   width: 71.5%;
   padding-left: 2rem;
 }
-.text p {
+.text p,
+a,
+.showcase a,
+.right h5 {
   color: #555555;
 }
 .text button {
@@ -119,7 +121,6 @@ img[alt="OpenDoor"] {
   margin-top: 0;
 }
 .showcase a {
-  color: #555555;
   font-weight: 500;
 }
 .nfts div {
@@ -171,6 +172,8 @@ footer .upsell {
   width: 100%;
   position: relative;
   overflow: hidden;
+  border-bottom: 2px solid #eeeeee;
+  border-top: 2px solid #eeeeee;
 }
 footer .upsell h1 {
   font-weight: 900;
@@ -188,7 +191,7 @@ footer .text button {
 }
 footer .text {
   width: 54%;
-  padding-bottom: 4em;
+  padding-bottom: 3.9em;
 }
 div.left {
   padding: 2em 0;
@@ -213,7 +216,6 @@ div.left {
   line-height: 19px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #555555;
   text-align: left;
   padding-bottom: 1em;
   margin: 0;
@@ -264,8 +266,8 @@ div.left {
   }
   .hero img {
     position: relative;
-    top: 80px;
-    height: 720px;
+    top: 30px;
+    height: 690px;
     right: -30px;
   }
   section.upsell {
@@ -285,28 +287,34 @@ div.left {
   section.press {
     padding: 5rem 0;
   }
+  .showcase {
+    padding-top: 3em;
+  }
   .showcase .text {
     padding: 0;
   }
   .showcase .nfts {
     padding: 2em 0;
-    overflow-y: hidden;
+    overflow: auto;
+    gap: 40px;
+  }
+  .nfts p {
+    align-self: flex-end;
   }
   footer .upsell .text {
     width: 46%;
   }
   footer .upsell {
     flex-basis: 100%;
-    padding-top: 7em;
+    padding-top: 6em;
+    padding-bottom: 4em;
     border-top: 2px solid #eeeeee;
     border-bottom: 2px solid #eeeeee;
     margin-top: 3em;
   }
   footer .upsell img {
     right: 100px;
-  }
-  footer .upsell {
-    padding-bottom: 4em;
+    max-width: 100%;
   }
   footer {
     padding-left: 0;
@@ -334,5 +342,8 @@ div.left {
     display: flex;
     justify-content: space-between;
     padding-top: 2em;
+  }
+  .bottom p#launching-date {
+    display: block;
   }
 }
