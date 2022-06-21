@@ -1,3 +1,355 @@
 * {
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+header nav {
+  display: none;
+}
+header a {
+  padding-right: 1em;
+}
+header i {
+  color: #999999;
+}
+h4 {
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-top: 1em;
+}
+h1 {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  color: #111111;
+}
+p {
+  color: #111111;
+  font-size: 20px;
+  line-height: 150%;
+}
+a {
+  font-size: 20px;
+  line-height: 100%;
+  text-decoration: none;
+}
+a#sign-up,
+h4 {
+  color: #ff3998;
+}
+section.hero {
+  max-width: 100%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 3em;
+}
+.hero img {
+  height: 430px;
+  max-width: 100%;
+  position: absolute;
+  right: -200px;
+  top: -50px;
+}
+.hero .text {
+  width: 71.5%;
+  padding-left: 2rem;
+}
+.text p,
+a,
+.showcase a,
+.right h5 {
+  color: #555555;
+}
+.text button {
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  border: 4px solid #0000;
+  border-radius: 100px;
+  background: linear-gradient(white, white) padding-box,
+    url(/assets/background.svg) border-box;
+  background-size: cover;
+  background-repeat: space;
+  background-position: right;
+}
+section.upsell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-image: url(/assets/background.svg);
+  background-size: cover;
+  background-position: center;
+  padding: 2em;
+}
+h2 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  color: #111111;
+}
+.upsell h2 {
+  margin-top: 1.8em;
+}
+.upsell p {
+  margin: 0;
+}
+section.press {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 1em;
+  padding: 4em 2em;
+}
+img[alt="OpenDoor"] {
+  display: none;
+}
+.press a:first-child {
+  width: 138px;
+  overflow: hidden;
+}
+.showcase .text {
+  padding: 0 2em;
+}
+.showcase h2 {
+  margin-top: 0;
+}
+.showcase a {
+  font-weight: 500;
+}
+.nfts div {
+  max-width: 290px;
+  background-color: #eeeeee;
+  border-radius: 16px;
+}
+.bid-info {
+  display: flex;
+  padding: 1.5em;
+  justify-content: space-between;
+}
+.bid-info h6 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #777777;
+}
+h6#orange {
+  color: #ff8139;
+  margin: 0;
+}
+#bold {
+  font-weight: 500;
+  font-size: 20px;
+  color: #111111;
+  margin: 0;
+}
+.bid-info p {
+  color: #777777;
+  margin: 0;
+}
+div.bid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.nfts {
+  display: flex;
+  padding: 2em;
+  gap: 40px;
+  overflow: scroll;
+}
+footer .upsell {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid #eeeeee;
+  border-top: 2px solid #eeeeee;
+  margin-top: 3em;
+}
+footer .upsell h1 {
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 68px;
+  margin-bottom: 0.3em;
+}
+footer .upsell img {
+  position: absolute;
+  bottom: 0;
+  right: -30px;
+  max-width: 50%;
+}
+footer .text button {
+  margin-top: 1em;
+}
+footer .text {
+  width: 56%;
+  padding-bottom: 3.9em;
+  padding-left: 2em;
+}
+div.left {
+  padding: 2em;
+}
+.right,
+.bottom {
+  padding-left: 2em;
+}
+.left i {
+  height: 18px;
+  color: #999999;
+  padding-right: 0.3em;
+}
+.right nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+.right ul {
+  flex-basis: 40%;
+  justify-content: flex-start;
+  padding: 0;
+}
+.right h5 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: left;
+  padding-bottom: 1em;
+  margin: 0;
+}
+.right li {
+  list-style: none;
+  padding: 0.5em 0;
+}
+.bottom p {
+  line-height: 100%;
+  color: #999999;
+  margin: 2em 0;
+}
+.bottom p#launching-date {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  header,
+  footer,
+  section {
+    margin: 0 5rem;
+  }
+  header i {
+    display: none !important;
+  }
+  header nav {
+    display: block;
+  }
+  header {
+    padding: 4.4rem 0;
+  }
+  .hero {
+    padding-right: 0;
+    padding-bottom: 7em;
+    margin-right: 0;
+  }
+  .hero .text {
+    flex-basis: 40%;
+    padding-left: 0;
+    padding-top: 5em;
+  }
+  .text h1 {
+    font-size: 96px;
+    line-height: 116px;
+    margin: 1.5rem 0;
+  }
+  .hero img {
+    top: 0;
+    right: 100px;
+    max-width: 50%;
+    height: 750px;
+  }
+  section.upsell {
+    padding: 4rem;
+    border-radius: 16px;
+  }
+  .upsell h2,
+  p {
+    align-self: flex-start;
+  }
+  img[alt="OpenDoor"] {
+    display: block;
+  }
+  .press a:first-child {
+    width: auto;
+  }
+  section.press {
+    padding: 5rem 0;
+  }
+  .showcase {
+    padding-top: 3em;
+  }
+  .showcase .text {
+    padding: 0;
+  }
+  .nfts {
+    padding: 2em 0;
+    overflow: auto;
+  }
+  .nfts p {
+    align-self: flex-end;
+  }
+  footer .upsell .text {
+    width: 44%;
+  }
+  footer .upsell {
+    padding-top: 6em;
+    padding-bottom: 4em;
+  }
+  footer .upsell img {
+    right: 100px;
+  }
+  footer {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .left,
+  .right {
+    flex-basis: 50%;
+    padding-top: 4em;
+  }
+  .left {
+    align-self: flex-end;
+  }
+  .right ul {
+    flex-basis: auto;
+    gap: 4em;
+  }
+  .right nav {
+    justify-content: space-between;
+  }
+  .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2em;
+  }
+  .bottom,
+  div.left,
+  footer .upsell .text {
+    padding-left: 0;
+  }
+  .bottom p#launching-date {
+    display: block;
+  }
 }
