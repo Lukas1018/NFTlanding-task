@@ -50,6 +50,7 @@ section.hero {
 }
 .hero img {
   height: 430px;
+  max-width: 100%;
   position: absolute;
   right: -200px;
   top: -50px;
@@ -165,15 +166,13 @@ div.bid {
   gap: 40px;
   overflow: scroll;
 }
-footer {
-  padding-left: 2em;
-}
 footer .upsell {
   width: 100%;
   position: relative;
   overflow: hidden;
   border-bottom: 2px solid #eeeeee;
   border-top: 2px solid #eeeeee;
+  margin-top: 2em;
 }
 footer .upsell h1 {
   font-weight: 900;
@@ -183,18 +182,24 @@ footer .upsell h1 {
 }
 footer .upsell img {
   position: absolute;
-  top: 120px;
+  bottom: 0;
   right: -30px;
+  max-width: 50%;
 }
 footer .text button {
   margin-top: 1em;
 }
 footer .text {
-  width: 54%;
+  width: 56%;
   padding-bottom: 3.9em;
+  padding-left: 2em;
 }
 div.left {
-  padding: 2em 0;
+  padding: 2em;
+}
+.right,
+.bottom {
+  padding-left: 2em;
 }
 .left i {
   height: 18px;
@@ -234,8 +239,10 @@ div.left {
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    padding: 0 5rem;
+  header,
+  footer,
+  section {
+    margin: 0 5rem;
   }
   header i {
     display: none !important;
@@ -253,9 +260,10 @@ div.left {
     padding-right: 0;
     padding-bottom: 7em;
     overflow: auto;
+    margin-right: 0;
   }
   .hero .text {
-    flex-basis: 50%;
+    flex-basis: 40%;
     padding-left: 0;
     padding-top: 5em;
   }
@@ -265,10 +273,10 @@ div.left {
     margin: 1.5rem 0;
   }
   .hero img {
-    position: relative;
-    top: 30px;
-    height: 690px;
-    right: -30px;
+    top: 0;
+    right: 100px;
+    max-width: 50%;
+    height: 750px;
   }
   section.upsell {
     padding: 4rem;
@@ -302,7 +310,7 @@ div.left {
     align-self: flex-end;
   }
   footer .upsell .text {
-    width: 46%;
+    width: 44%;
   }
   footer .upsell {
     flex-basis: 100%;
@@ -314,7 +322,6 @@ div.left {
   }
   footer .upsell img {
     right: 100px;
-    max-width: 100%;
   }
   footer {
     padding-left: 0;
@@ -342,6 +349,11 @@ div.left {
     display: flex;
     justify-content: space-between;
     padding-top: 2em;
+  }
+  .bottom,
+  div.left,
+  footer .upsell .text {
+    padding-left: 0;
   }
   .bottom p#launching-date {
     display: block;
