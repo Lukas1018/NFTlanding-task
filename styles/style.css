@@ -11,6 +11,9 @@ header {
 header nav {
   display: none;
 }
+header a {
+  padding-right: 1em;
+}
 header i {
   color: #999999;
 }
@@ -172,7 +175,7 @@ footer .upsell {
   overflow: hidden;
   border-bottom: 2px solid #eeeeee;
   border-top: 2px solid #eeeeee;
-  margin-top: 2em;
+  margin-top: 3em;
 }
 footer .upsell h1 {
   font-weight: 900;
@@ -250,16 +253,12 @@ div.left {
   header nav {
     display: block;
   }
-  header a {
-    padding-right: 1em;
-  }
   header {
     padding: 4.4rem 0;
   }
   .hero {
     padding-right: 0;
     padding-bottom: 7em;
-    overflow: auto;
     margin-right: 0;
   }
   .hero .text {
@@ -301,10 +300,9 @@ div.left {
   .showcase .text {
     padding: 0;
   }
-  .showcase .nfts {
+  .nfts {
     padding: 2em 0;
     overflow: auto;
-    gap: 40px;
   }
   .nfts p {
     align-self: flex-end;
@@ -313,12 +311,8 @@ div.left {
     width: 44%;
   }
   footer .upsell {
-    flex-basis: 100%;
     padding-top: 6em;
     padding-bottom: 4em;
-    border-top: 2px solid #eeeeee;
-    border-bottom: 2px solid #eeeeee;
-    margin-top: 3em;
   }
   footer .upsell img {
     right: 100px;
